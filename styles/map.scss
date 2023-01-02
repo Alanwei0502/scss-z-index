@@ -1,7 +1,6 @@
 @import "./utils";
 @import "./z-index";
 
-
 .app {
   font-family: sans-serif;
   text-align: center;
@@ -9,7 +8,7 @@
 
   .red {
     @include elementStyle(100px, 10px, red);
-    z-index: z-index(a);
+    z-index: z-index(dialog);
   }
 
   .orange {
