@@ -1,3 +1,4 @@
+// [list-index]
 @function z($element) { 
 	$list: project-covers, user-tooltip, sorting-bar, modal, navigation;
 	
@@ -9,4 +10,21 @@
 	
 	@warn '#{$list} 中沒有 #{$element} 層級'; 
 	@return null; 
+};
+
+
+// [map-get]
+@function z-index($key){
+	$z-layer: (
+		"header": 9,
+		"footer": 9,
+		"dialog": 99,
+	);
+
+  @if map-has-key($z-layer, $key) {
+		@return map-get($z-layer, $key);
+	}
+
+	@warn '#{$z-layer} 中沒有 #{$key} 層級'; 
+	@return null;
 }

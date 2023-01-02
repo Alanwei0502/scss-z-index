@@ -1,0 +1,24 @@
+@import "./utils";
+@import "./z-index";
+
+
+.app {
+  font-family: sans-serif;
+  text-align: center;
+  position: relative;
+
+  .red {
+    @include elementStyle(100px, 10px, red);
+    z-index: z-index(a);
+  }
+
+  .orange {
+    @include elementStyle(100px, 20px, orange);
+    z-index: z-index(header);
+  }
+
+  .yellow {
+    @include elementStyle(100px, 30px, yellow);
+    z-index: z-index(footer);
+  }
+}
