@@ -1,0 +1,15 @@
+@mixin square($length){
+  width: $length;
+  height: $length;
+}
+
+@mixin translate($length){
+  transform: translate($length);
+}
+
+@mixin elementStyle($square-length, $translate-length, $bg-color){
+  @include square($square-length);
+  transform: translate($translate-length, $translate-length);
+  position: absolute;
+  background-color: $bg-color;
+}
